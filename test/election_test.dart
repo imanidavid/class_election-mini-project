@@ -6,7 +6,10 @@ void main() {
   test('aLINE then Aline is refused', () {
     final e = Election(candidates: [Candidate('Keza Uwase')]);
     expect(e.castVote(e.candidates.first, 'aLINE'), isNull);
-    expect(e.castVote(e.candidates.first, '  ALINE '), 'Aline has already voted');
+    expect(
+      e.castVote(e.candidates.first, '  ALINE '),
+      'Aline has already voted',
+    );
   });
 
   test('4, 4, 1 -> 44.4%, 44.4%, 11.1% and a tie, highest first', () {
@@ -28,7 +31,10 @@ void main() {
     expect(e.percentage(ranked[0]).toStringAsFixed(1), '44.4');
     expect(e.percentage(ranked[1]).toStringAsFixed(1), '44.4');
     expect(e.percentage(ranked[2]).toStringAsFixed(1), '11.1');
-    expect(e.winnerText(), 'Tie between Keza Uwase and Mutoni Aline (4 votes each)');
+    expect(
+      e.winnerText(),
+      'Tie between Keza Uwase and Mutoni Aline (4 votes each)',
+    );
   });
 
   test('cleanName collapses spaces and title-cases', () {
@@ -39,7 +45,10 @@ void main() {
 
   test('adding duplicate keza is refused', () {
     final e = Election(candidates: [Candidate('Keza Uwase')]);
-    expect(e.addCandidate(' keza  uwase '), 'Keza Uwase is already a candidate');
+    expect(
+      e.addCandidate(' keza  uwase '),
+      'Keza Uwase is already a candidate',
+    );
   });
 
   test('reset clears votes -> No votes yet, never NaN', () {

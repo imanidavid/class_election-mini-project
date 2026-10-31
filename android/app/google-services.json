@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "150476526947",
+    "project_id": "classelection-268f7",
+    "storage_bucket": "classelection-268f7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150476526947:android:3677554a1966c03c5daf56",
+        "android_client_info": {
+          "package_name": "com.imani1st.class_election"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZlS9AmIALqJzIONUUykHMST3oi892B1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

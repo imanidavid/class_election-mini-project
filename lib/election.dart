@@ -7,14 +7,15 @@ import 'models.dart';
 /// screen should show its own success message. That keeps the rules testable
 /// on their own, far away from any widget.
 class Election {
-  Election({required List<Candidate> candidates})
-    : candidates = List.of(candidates);
+  Election({required List<Candidate> candidates, List<String>? voters})
+    : candidates = List.of(candidates),
+      voters = List.of(voters ?? const []);
 
   final List<Candidate> candidates;
 
   /// The cleaned name of every person who has already voted, in the order
   /// they voted. A list, not a set, so `contains` and `indexOf` both work.
-  final List<String> voters = [];
+  final List<String> voters;
 
   /// The total number of votes across all candidates.
   int get totalVotes => candidates.fold(0, (sum, c) => sum + c.votes);
